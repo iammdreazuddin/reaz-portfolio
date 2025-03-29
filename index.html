@@ -14,6 +14,8 @@
             --light: #ecf0f1;
             --accent: #e74c3c;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --medium-green: #00ab6c;
+            --medium-dark-green: #007a4f;
         }
         
         * {
@@ -31,26 +33,6 @@
                 linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
                 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="40" height="40" x="0" y="0" fill="%23f0f0f0" opacity="0.5"/><rect width="40" height="40" x="40" y="40" fill="%23f0f0f0" opacity="0.5"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%233498db" stroke-width="0.5" opacity="0.3"/></svg>');
         }
-        .article-link {
-            display: inline-block;
-            margin-top: 10px;
-            color: var(--primary);
-            font-weight: bold;
-            text-decoration: none;
-            border-bottom: 2px dotted var(--primary);
-            transition: all 0.3s;
-        }
-
-        .article-link:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        .fa-medium {
-            margin-right: 8px;
-        }
-
-
         
         header {
             background: linear-gradient(135deg, var(--dark), var(--primary));
@@ -194,6 +176,83 @@
         .project-card .impact {
             font-weight: bold;
             color: var(--secondary);
+        }
+        
+        /* Articles Section Styling */
+        #articles {
+            background: #fafafa;
+            border-top: 3px solid var(--medium-green);
+        }
+        
+        #articles h2 {
+            color: var(--medium-dark-green);
+            border-bottom-color: var(--medium-green);
+        }
+        
+        #articles h2 i {
+            color: var(--medium-green);
+        }
+        
+        #articles .project-card {
+            border-left: 4px solid var(--medium-green);
+        }
+        
+        #articles .project-card:hover {
+            box-shadow: 0 8px 25px rgba(0, 171, 108, 0.15);
+        }
+        
+        .article-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 12px;
+            color: var(--medium-green) !important;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .article-link::after {
+            content: "→";
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .article-link:hover {
+            color: var(--medium-dark-green) !important;
+        }
+        
+        .article-link:hover::after {
+            transform: translateX(3px);
+        }
+        
+        .medium-btn {
+            background: var(--medium-green);
+            color: white;
+        }
+        
+        .medium-btn:hover {
+            background: var(--medium-dark-green);
+        }
+        
+        /* Expertise Section Styling */
+        .expertise-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .expertise-item:last-child {
+            border-bottom: none;
+        }
+        
+        .expertise-item h3 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+        }
+        
+        .expertise-item p {
+            color: #555;
+            line-height: 1.7;
         }
         
         .contact-links {
@@ -354,22 +413,22 @@
         <section id="expertise">
             <h2><i class="fas fa-star"></i> Core Expertise</h2>
             
-            <div class="experience-item">
+            <div class="expertise-item">
                 <h3><i class="fas fa-chart-line"></i> Management Reporting</h3>
                 <p>Specialize in creating comprehensive KPI reports covering regional performance metrics to client service insights. Develop executive dashboards that facilitate data-driven decision making across the organization.</p>
             </div>
             
-            <div class="experience-item">
+            <div class="expertise-item">
                 <h3><i class="fas fa-shield-alt"></i> Performance & Data Integrity</h3>
                 <p>Oversee analysis of key metrics including bandwidth utilization and network efficiency. Implement validation processes ensuring 99.9% accuracy in all reported data used for strategic business decisions.</p>
             </div>
             
-            <div class="experience-item">
+            <div class="expertise-item">
                 <h3><i class="fas fa-users"></i> Cross-Functional Collaboration</h3>
                 <p>Work closely with Network Monitoring, Planning, Central Operations, Marketing, Billing, and CRM teams to align reporting with strategic goals. Bridge technical and business units through clear data communication.</p>
             </div>
             
-            <div class="experience-item">
+            <div class="expertise-item">
                 <h3><i class="fas fa-robot"></i> Process Automation</h3>
                 <p>As company's sole Excel trainer, have trained 300+ colleagues in advanced data techniques. Developed 15+ automation tools that reduced manual reporting time by 80% across departments.</p>
             </div>
@@ -420,41 +479,41 @@
                 <div class="project-card">
                     <h3>My Journey with Tableau</h3>
                     <p>Visualizing sales data and deriving business insights through Tableau dashboards.</p>
-                    <a href="https://medium.com/@reazsummit/my-journey-with-tableau-visualizing-sales-data-159b9a09d273" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/my-journey-with-tableau-visualizing-sales-data-159b9a09d273" target="_blank" class="article-link">Read Article</a>
                 </div>
                 
                 <div class="project-card">
                     <h3>Power BI Sales Analysis</h3>
                     <p>End-to-end project analyzing sales and shipping data patterns.</p>
-                    <a href="https://medium.com/@reazsummit/power-bi-project-summary-analyzing-sales-and-shipping-data-38ae71c88763" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/power-bi-project-summary-analyzing-sales-and-shipping-data-38ae71c88763" target="_blank" class="article-link">Read Article</a>
                 </div>
                 
                 <div class="project-card">
                     <h3>VBA File Renaming</h3>
                     <p>Automating tedious file organization tasks with VBA macros.</p>
-                    <a href="https://medium.com/@reazsummit/automating-file-renaming-with-vba-a-personal-journey-24b760ba2f96" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/automating-file-renaming-with-vba-a-personal-journey-24b760ba2f96" target="_blank" class="article-link">Read Article</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Python Remote File Retrieval</h3>
                     <p>Step-by-step guide to automating file downloads.</p>
-                    <a href="https://medium.com/@reazsummit/automating-remote-file-retrieval-with-python-a-step-by-step-guide-45cf62b32c57" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/automating-remote-file-retrieval-with-python-a-step-by-step-guide-45cf62b32c57" target="_blank" class="article-link">Read Article</a>
                 </div>
 
                 <div class="project-card">
                     <h3>VBA SLA Reports</h3>
                     <p>How I automated weekly reporting for 90% time savings.</p>
-                    <a href="https://medium.com/@reazsummit/how-i-automated-my-weekly-reporting-process-using-vba-a-journey-from-manual-to-automated-b4bb52368069" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/how-i-automated-my-weekly-reporting-process-using-vba-a-journey-from-manual-to-automated-b4bb52368069" target="_blank" class="article-link">Read Article</a>
                 </div>
 
                 <div class="project-card">
                     <h3>Excel File Merging</h3>
                     <p>VBA script to combine files instantly.</p>
-                    <a href="https://medium.com/@reazsummit/excel-hack-merge-files-in-seconds-with-vba-no-more-copy-paste-ccec36148d78" target="_blank" class="article-link">Read on Medium →</a>
+                    <a href="https://medium.com/@reazsummit/excel-hack-merge-files-in-seconds-with-vba-no-more-copy-paste-ccec36148d78" target="_blank" class="article-link">Read Article</a>
                 </div>
             </div>
             <div style="text-align: center; margin-top: 20px;">
-                <a href="https://medium.com/@reazsummit" target="_blank" class="cta-btn" style="display: inline-block;">
+                <a href="https://medium.com/@reazsummit" target="_blank" class="cta-btn medium-btn">
                     <i class="fab fa-medium"></i> View All Articles on Medium
                 </a>
             </div>
@@ -493,7 +552,7 @@
                     <i class="fab fa-linkedin"></i> linkedin.com/in/iammdreazuddin
                 </a>
                 <a href="https://medium.com/@reazsummit" target="_blank" class="contact-link">
-                    <i class="fab fa-file-excel"></i> medium.com/@reazsummit
+                    <i class="fab fa-medium"></i> medium.com/@reazsummit
                 </a>
                 <a href="https://t.me/MD_Reaz_Uddin" target="_blank" class="contact-link">
                     <i class="fab fa-telegram"></i> @MD_Reaz_Uddin
