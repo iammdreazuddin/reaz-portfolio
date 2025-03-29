@@ -17,6 +17,127 @@
             --medium-green: #00ab6c;
             --medium-dark-green: #007a4f;
         }
+            .profile-picture {
+            border-color: var(--primary); /* Blue border */
+        }
+        .profile-picture:hover {
+    border-color: var(--secondary); /* Green on hover */
+}
+.profile-picture {
+    width: 130px;
+    height: 130px;
+}
+
+                /* Profile Picture Styles */
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.5rem;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+
+        #profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .profile-picture:hover #profile-img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .profile-picture {
+                width: 120px;
+                height: 120px;
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Education Timeline */
+        .education-timeline {
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .education-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 15px;
+            height: 100%;
+            width: 2px;
+            background: var(--primary);
+            opacity: 0.3;
+        }
+
+        .education-item {
+            position: relative;
+            margin-bottom: 2rem;
+            display: flex;
+        }
+
+        .education-icon {
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 0;
+            transform: translateX(-50%);
+        }
+
+        .education-content {
+            margin-left: 40px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .education-item:last-child .education-content {
+            border-bottom: none;
+        }
+
+        .education-item h3 {
+            color: var(--dark);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        .education-duration {
+            color: var(--primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+
+        .education-major {
+            color: #555;
+            font-size: 0.95rem;
+            margin-bottom: 5px;
+        }
+
+        .education-description {
+            color: #777;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .education-content {
+                margin-left: 30px;
+            }
+        }
+
+
         
         * {
             margin: 0;
@@ -381,6 +502,10 @@
 </head>
 <body>
     <header>
+        <div class="profile-picture">
+            <img src="profile.jpg" alt="MD Reaz Uddin" id="profile-img">
+        </div>
+        
         <h1>MD Reaz Uddin</h1>
         <p>Assistant Manager, Performance Reporting | Summit Communications Ltd.</p>
         <div class="tagline">
@@ -521,24 +646,62 @@
         
         <section id="education">
             <h2><i class="fas fa-graduation-cap"></i> Education</h2>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <span class="experience-title">FGPHS</span>
-                        <span class="experience-company">FGC</span>
+            
+            <div class="education-timeline">
+                <!-- School -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Feni Govt. Pilot High School (FGPHS)</h3>
+                        <p class="education-duration">2005 - 2010</p>
+                        <p class="education-major">Science</p>
+                        <p class="education-description">Secondary School Certificate (SSC)</p>
                     </div>
                 </div>
-            </div>
-            <div class="experience-item">
-                <div class="experience-header">
-                    <div>
-                        <span class="experience-title">AIUB</span>
-                        <span class="experience-company">JU</span>
+                
+                <!-- College -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Feni Govt. College (FGC)</h3>
+                        <p class="education-duration">2010 - 2012</p>
+                        <p class="education-major">Science</p>
+                        <p class="education-description">Higher Secondary Certificate (HSC)</p>
+                    </div>
+                </div>
+                
+                <!-- University -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>American International University - Bangladesh (AIUB)</h3>
+                        <p class="education-duration">2013 - 2017</p>
+                        <p class="education-major">Computer Science and Engineering (CSE)</p>
+                        <p class="education-description">Bachelor of Science (BSc)</p>
+                    </div>
+                </div>
+                
+                <!-- Masters -->
+                <div class="education-item">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Jahangirnagar University (JU)</h3>
+                        <p class="education-duration">2024 - Present</p>
+                        <p class="education-major">Applied Statistics and Data Science (ASDS)</p>
+                        <p class="education-description">Masters (Running)</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+  
         <section id="contact">
             <h2><i class="fas fa-envelope"></i> Contact</h2>
             <div class="contact-links">
