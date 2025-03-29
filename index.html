@@ -1,38 +1,161 @@
-!DOCTYPE html
-html lang=en
-head
-    meta charset=UTF-8
-    meta name=viewport content=width=device-width, initial-scale=1.0
-    titleMD Reaz Uddin - Portfoliotitle
-    style
-        body { font-family Arial, sans-serif; margin 0; padding 0; }
-        header { background #333; color white; text-align center; padding 20px; }
-        section { padding 20px; max-width 800px; margin auto; }
-        .contact a { color #007bff; text-decoration none; }
-    style
-head
-body
-    header
-        h1MD Reaz Uddinh1
-        pExcel & VBA Expert  Data Analyst  Performance Reportingp
-    header
-    section id=about
-        h2About Meh2
-        pI am an Assistant Manager in Performance Reporting at Summit Communications Ltd. I specialize in Excel VBA, data analytics, network reporting, and automation.p
-    section
-    section id=projects
-        h2Projectsh2
-        ul
-            liAutomated VBA Reporting for Network Analysisli
-            liTelegram Bot for Data Notificationsli
-            liPowerPoint Report Automation with Excel VBAli
-        ul
-    section
-    section id=contact class=contact
-        h2Contact Meh2
-        pEmail a href=mailtoreazuddin@example.comreazuddin@example.comap
-        pLinkedIn a href=httpslinkedin.cominreazuddin target=_blanklinkedin.cominreazuddinap
-        pTelegram a href=httpst.meReazDataBot target=_blank@ReazDataBotap
-    section
-body
-html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Reaz Uddin - Data & Automation Expert</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, var(--dark), var(--primary));
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        section {
+            padding: 30px;
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .skill {
+            background: var(--light);
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .project-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--secondary);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--dark);
+            color: white;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MD Reaz Uddin</h1>
+        <p>Excel & VBA Expert | Data Analyst | Automation Specialist</p>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am an <strong>Assistant Manager in Performance Reporting</strong> at Summit Communications Ltd. with 5+ years of experience in data analytics, automation, and network performance optimization. I transform raw data into actionable insights using Excel VBA, Power BI, and Python.</p>
+        
+        <h3>Key Achievements</h3>
+        <ul>
+            <li>Automated 15+ monthly reports, saving 20+ hours of manual work.</li>
+            <li>Developed a Telegram bot for real-time KPI notifications.</li>
+            <li>Optimized SQL queries to reduce report generation time by 40%.</li>
+        </ul>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <span class="skill">Excel VBA</span>
+            <span class="skill">Power BI</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Python</span>
+            <span class="skill">Data Visualization</span>
+            <span class="skill">PowerPoint Automation</span>
+            <span class="skill">Network Reporting</span>
+            <span class="skill">Dashboard Design</span>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+            <div class="project-card">
+                <h3>Automated Network Reports</h3>
+                <p>Built a VBA system to pull data from SQL and generate Excel dashboards.</p>
+                <p><strong>Impact:</strong> Reduced manual work by 90%.</p>
+            </div>
+            <div class="project-card">
+                <h3>Telegram Data Bot</h3>
+                <p>Python bot sending automated performance alerts to teams.</p>
+                <p><strong>Tech:</strong> Python, API Integration.</p>
+            </div>
+            <div class="project-card">
+                <h3>PPT Auto-Generator</h3>
+                <p>VBA tool converting Excel data into PowerPoint slides.</p>
+                <p><strong>Used by:</strong> 50+ managers monthly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <p>📧 Email: <a href="mailto:reazuddin@example.com">reazuddin@example.com</a></p>
+        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/reazuddin" target="_blank">linkedin.com/in/reazuddin</a></p>
+        <p>📱 Telegram: <a href="https://t.me/ReazDataBot" target="_blank">@ReazDataBot</a></p>
+    </section>
+
+    <footer>
+        <p>© 2024 MD Reaz Uddin | Built with HTML & CSS</p>
+    </footer>
+</body>
+</html>
