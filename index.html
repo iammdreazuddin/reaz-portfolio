@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MD Reaz Uddin - Data & Automation Expert</title>
+    <title>MD Reaz Uddin | Performance Reporting & Data Analytics Expert</title>
+    <meta name="description" content="Assistant Manager in Performance Reporting specializing in KPI analysis, Excel automation, and business intelligence">
+    <link rel="icon" href="https://img.icons8.com/color/48/000000/microsoft-excel.png">
     <style>
         :root {
             --primary: #3498db;
@@ -11,151 +13,508 @@
             --dark: #2c3e50;
             --light: #ecf0f1;
             --accent: #e74c3c;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
+            box-sizing: border-box;
         }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="40" height="40" x="0" y="0" fill="%23f0f0f0" opacity="0.5"/><rect width="40" height="40" x="40" y="40" fill="%23f0f0f0" opacity="0.5"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%233498db" stroke-width="0.5" opacity="0.3"/></svg>');
+        }
+        .article-link {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--primary);
+            font-weight: bold;
+            text-decoration: none;
+            border-bottom: 2px dotted var(--primary);
+            transition: all 0.3s;
+        }
+
+        .article-link:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .fa-medium {
+            margin-right: 8px;
+        }
+
+
+        
         header {
             background: linear-gradient(135deg, var(--dark), var(--primary));
             color: white;
             text-align: center;
-            padding: 40px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 3rem 1rem;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
         }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(46, 204, 113, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(231, 76, 60, 0.1) 0%, transparent 20%);
+        }
+        
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            position: relative;
         }
+        
         header p {
-            font-size: 1.2em;
+            font-size: 1.2rem;
             opacity: 0.9;
+            position: relative;
         }
-        section {
-            padding: 30px;
+        
+        .tagline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+        
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+        
+        .container {
             max-width: 900px;
-            margin: 20px auto;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        section {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--primary);
         }
+        
         h2 {
             color: var(--primary);
             border-bottom: 2px solid var(--secondary);
-            padding-bottom: 10px;
-            display: inline-block;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
         }
+        
+        h2 i {
+            margin-right: 0.5rem;
+        }
+        
+        h3 {
+            color: var(--dark);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3 i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+        
         .skills {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 0.8rem;
         }
+        
         .skill {
             background: var(--light);
-            padding: 8px 15px;
+            padding: 0.5rem 1rem;
             border-radius: 20px;
-            font-size: 0.9em;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
         }
+        
+        .skill i {
+            margin-right: 0.3rem;
+        }
+        
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
         }
+        
         .project-card {
-            background: var(--light);
-            padding: 15px;
-            border-radius: 8px;
+            background: white;
+            border: 1px solid #eee;
             border-left: 4px solid var(--secondary);
-            transition: transform 0.3s;
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
+        
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
-        .contact a {
+        
+        .project-card h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+        }
+        
+        .project-card p {
+            margin-bottom: 0.8rem;
+            color: #555;
+        }
+        
+        .project-card .impact {
+            font-weight: bold;
+            color: var(--secondary);
+        }
+        
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-link {
+            display: flex;
+            align-items: center;
             color: var(--primary);
             text-decoration: none;
-            font-weight: bold;
+            transition: color 0.3s;
         }
-        .contact a:hover {
+        
+        .contact-link:hover {
             color: var(--accent);
-            text-decoration: underline;
         }
+        
+        .contact-link i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .cta {
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 3rem 2rem;
+            border-radius: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%),
+                repeating-linear-gradient(45deg, transparent, transparent 5px, rgba(255,255,255,0.05) 5px, rgba(255,255,255,0.05) 10px);
+            animation: rotate 20s linear infinite;
+        }
+        
+        @keyframes rotate {
+            100% { transform: rotate(360deg); }
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta h2 {
+            color: white;
+            border-bottom: none;
+        }
+        
+        .cta-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary);
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .cta-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 2rem;
             background: var(--dark);
             color: white;
-            margin-top: 30px;
+        }
+        
+        .experience-item {
+            margin-bottom: 2rem;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-title {
+            font-weight: bold;
+            color: var(--dark);
+        }
+        
+        .experience-company {
+            color: var(--primary);
+        }
+        
+        .experience-duration {
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .projects {
+                grid-template-columns: 1fr;
+            }
+            
+            .experience-header {
+                flex-direction: column;
+            }
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>MD Reaz Uddin</h1>
-        <p>Excel & VBA Expert | Data Analyst | Automation Specialist</p>
+        <p>Assistant Manager, Performance Reporting | Summit Communications Ltd.</p>
+        <div class="tagline">
+            <span class="tag">📡 KPI Performance Reporting</span>
+            <span class="tag">📊 Data Analytics & Insights</span>
+            <span class="tag">💻 Excel Macros & VBA</span>
+            <span class="tag">📑 SQL & Query</span>
+            <span class="tag">🤖 Power Query</span>
+            <span class="tag">🌐 DAX & BI</span>
+        </div>
     </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am an <strong>Assistant Manager in Performance Reporting</strong> at Summit Communications Ltd. with 5+ years of experience in data analytics, automation, and network performance optimization. I transform raw data into actionable insights using Excel VBA, Power BI, and Python.</p>
+    
+    <div class="container">
+        <section id="about">
+            <h2><i class="fas fa-user-tie"></i> Professional Profile</h2>
+            <p>Performance Reporting Specialist with 5+ years of experience in transforming data into actionable insights at Summit Communications Ltd. Passionate about data-driven decision-making in the telecommunications sector.</p>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">Assistant Manager, Performance Reporting</span>
+                        <span class="experience-company">Summit Communications Ltd.</span>
+                    </div>
+                    <span class="experience-duration">2019 - Present</span>
+                </div>
+                <p>OSS Department | Reporting to Head of Service Assurance</p>
+            </div>
+        </section>
         
-        <h3>Key Achievements</h3>
-        <ul>
-            <li>Automated 15+ monthly reports, saving 20+ hours of manual work.</li>
-            <li>Developed a Telegram bot for real-time KPI notifications.</li>
-            <li>Optimized SQL queries to reduce report generation time by 40%.</li>
-        </ul>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span class="skill">Excel VBA</span>
-            <span class="skill">Power BI</span>
-            <span class="skill">SQL</span>
-            <span class="skill">Python</span>
-            <span class="skill">Data Visualization</span>
-            <span class="skill">PowerPoint Automation</span>
-            <span class="skill">Network Reporting</span>
-            <span class="skill">Dashboard Design</span>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project-card">
-                <h3>Automated Network Reports</h3>
-                <p>Built a VBA system to pull data from SQL and generate Excel dashboards.</p>
-                <p><strong>Impact:</strong> Reduced manual work by 90%.</p>
+        <section id="expertise">
+            <h2><i class="fas fa-star"></i> Core Expertise</h2>
+            
+            <div class="experience-item">
+                <h3><i class="fas fa-chart-line"></i> Management Reporting</h3>
+                <p>Specialize in creating comprehensive KPI reports covering regional performance metrics to client service insights. Develop executive dashboards that facilitate data-driven decision making across the organization.</p>
             </div>
-            <div class="project-card">
-                <h3>Telegram Data Bot</h3>
-                <p>Python bot sending automated performance alerts to teams.</p>
-                <p><strong>Tech:</strong> Python, API Integration.</p>
+            
+            <div class="experience-item">
+                <h3><i class="fas fa-shield-alt"></i> Performance & Data Integrity</h3>
+                <p>Oversee analysis of key metrics including bandwidth utilization and network efficiency. Implement validation processes ensuring 99.9% accuracy in all reported data used for strategic business decisions.</p>
             </div>
-            <div class="project-card">
-                <h3>PPT Auto-Generator</h3>
-                <p>VBA tool converting Excel data into PowerPoint slides.</p>
-                <p><strong>Used by:</strong> 50+ managers monthly.</p>
+            
+            <div class="experience-item">
+                <h3><i class="fas fa-users"></i> Cross-Functional Collaboration</h3>
+                <p>Work closely with Network Monitoring, Planning, Central Operations, Marketing, Billing, and CRM teams to align reporting with strategic goals. Bridge technical and business units through clear data communication.</p>
             </div>
-        </div>
-    </section>
+            
+            <div class="experience-item">
+                <h3><i class="fas fa-robot"></i> Process Automation</h3>
+                <p>As company's sole Excel trainer, have trained 300+ colleagues in advanced data techniques. Developed 15+ automation tools that reduced manual reporting time by 80% across departments.</p>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2><i class="fas fa-tools"></i> Technical Skills</h2>
+            <div class="skills">
+                <span class="skill"><i class="fas fa-file-excel"></i> Excel VBA</span>
+                <span class="skill"><i class="fas fa-chart-line"></i> Power BI</span>
+                <span class="skill"><i class="fas fa-database"></i> SQL</span>
+                <span class="skill"><i class="fab fa-python"></i> Python</span>
+                <span class="skill"><i class="fas fa-project-diagram"></i> Power Automate</span>
+                <span class="skill"><i class="fas fa-chart-pie"></i> Tableau</span>
+                <span class="skill"><i class="fas fa-network-wired"></i> Network Analytics</span>
+                <span class="skill"><i class="fas fa-server"></i> Huawei/Juniper/ZTE</span>
+                <span class="skill"><i class="fas fa-clock"></i> MTTE/MTTR Analysis</span>
+                <span class="skill"><i class="fas fa-file-contract"></i> SLA Reporting</span>
+            </div>
+        </section>
+        
+        <section id="projects">
+            <h2><i class="fas fa-project-diagram"></i> Key Projects</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>Automated Executive Dashboard</h3>
+                    <p>Developed Power BI dashboards that aggregate data from multiple sources to provide real-time visibility into network performance and business KPIs.</p>
+                    <p class="impact">Impact: Reduced monthly reporting time by 75% for leadership team.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Network Health Monitoring System</h3>
+                    <p>Created automated alerts using Python that notify operations team of potential network issues before they impact customers.</p>
+                    <p class="impact">Impact: 30% reduction in customer-reported outages.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Excel Automation Framework</h3>
+                    <p>Built library of 50+ VBA macros that standardized reporting across departments and eliminated manual errors.</p>
+                    <p class="impact">Impact: Adopted company-wide, saving 200+ hours monthly.</p>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact" class="contact">
-        <h2>Get In Touch</h2>
-        <p>📧 Email: <a href="mailto:reazuddin@example.com">reazuddin@example.com</a></p>
-        <p>🔗 LinkedIn: <a href="https://linkedin.com/in/reazuddin" target="_blank">linkedin.com/in/reazuddin</a></p>
-        <p>📱 Telegram: <a href="https://t.me/ReazDataBot" target="_blank">@ReazDataBot</a></p>
-    </section>
+        <section id="articles">
+            <h2><i class="fas fa-newspaper"></i> Featured Articles</h2>
+            <div class="projects">
+                <div class="project-card">
+                    <h3>My Journey with Tableau</h3>
+                    <p>Visualizing sales data and deriving business insights through Tableau dashboards.</p>
+                    <a href="https://medium.com/@reazsummit/my-journey-with-tableau-visualizing-sales-data-159b9a09d273" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Power BI Sales Analysis</h3>
+                    <p>End-to-end project analyzing sales and shipping data patterns.</p>
+                    <a href="https://medium.com/@reazsummit/power-bi-project-summary-analyzing-sales-and-shipping-data-38ae71c88763" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
+                
+                <div class="project-card">
+                    <h3>VBA File Renaming</h3>
+                    <p>Automating tedious file organization tasks with VBA macros.</p>
+                    <a href="https://medium.com/@reazsummit/automating-file-renaming-with-vba-a-personal-journey-24b760ba2f96" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
 
+                <div class="project-card">
+                    <h3>Python Remote File Retrieval</h3>
+                    <p>Step-by-step guide to automating file downloads.</p>
+                    <a href="https://medium.com/@reazsummit/automating-remote-file-retrieval-with-python-a-step-by-step-guide-45cf62b32c57" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>VBA SLA Reports</h3>
+                    <p>How I automated weekly reporting for 90% time savings.</p>
+                    <a href="https://medium.com/@reazsummit/how-i-automated-my-weekly-reporting-process-using-vba-a-journey-from-manual-to-automated-b4bb52368069" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
+
+                <div class="project-card">
+                    <h3>Excel File Merging</h3>
+                    <p>VBA script to combine files instantly.</p>
+                    <a href="https://medium.com/@reazsummit/excel-hack-merge-files-in-seconds-with-vba-no-more-copy-paste-ccec36148d78" target="_blank" class="article-link">Read on Medium →</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://medium.com/@reazsummit" target="_blank" class="cta-btn" style="display: inline-block;">
+                    <i class="fab fa-medium"></i> View All Articles on Medium
+                </a>
+            </div>
+        </section>
+        
+        <section id="education">
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">FGPHS</span>
+                        <span class="experience-company">FGC</span>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <span class="experience-title">AIUB</span>
+                        <span class="experience-company">JU</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <div class="contact-links">
+                <a href="mailto:reazsummit@gmail.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> reazsummit@gmail.com
+                </a>
+                <a href="tel:+8801832639650" class="contact-link">
+                    <i class="fas fa-phone"></i> +880 1832 639650
+                </a>
+                <a href="https://www.linkedin.com/in/iammdreazuddin/" target="_blank" class="contact-link">
+                    <i class="fab fa-linkedin"></i> linkedin.com/in/iammdreazuddin
+                </a>
+                <a href="https://medium.com/@reazsummit" target="_blank" class="contact-link">
+                    <i class="fab fa-file-excel"></i> medium.com/@reazsummit
+                </a>
+                <a href="https://t.me/MD_Reaz_Uddin" target="_blank" class="contact-link">
+                    <i class="fab fa-telegram"></i> @MD_Reaz_Uddin
+                </a>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="cta-content">
+                <h2>Ready to Transform Your Data Strategy?</h2>
+                <p>Let's discuss how automation and analytics can drive your business forward.</p>
+                <a href="mailto:reazsummit@gmail.com" class="cta-btn">Schedule Consultation</a>
+            </div>
+        </section>
+    </div>
+    
     <footer>
-        <p>© 2024 MD Reaz Uddin | Built with HTML & CSS</p>
+        <p>&copy; 2024 MD Reaz Uddin. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+            Built with <i class="fas fa-heart" style="color: var(--accent);"></i> for data-driven excellence
+        </p>
     </footer>
 </body>
 </html>
